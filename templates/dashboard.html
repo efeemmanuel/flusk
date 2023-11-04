@@ -1,0 +1,61 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+
+{% block content %}
+      <section style="margin-top: 6%;">
+      
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <h5 class="service-dashboard" style="font-family: 'Bahnschrift','sans-serif' !important; font-style: normal !important; font-weight: 500 !important; font-size: 30px !important; margin-bottom: 5%;">
+                      {% if user.is_authenticated %}
+						<p><span style="font-family: 'Bahnschrift','sans-serif' !important; font-style: normal !important; font-weight: 300 !important; font-size: 20px !important; " >Welcome,</span>
+						{{ user.username }}</p>
+					{% endif %}
+                </div>
+                <div class="w-100"></div>
+                <div class="col">
+                  <p class="card-text">active course</p>
+                  <h5 class="card-title">0</h5>
+                </div>
+                <div class="col">
+                  <p class="card-text">active course</p>
+                  <h5 class="card-title">0</h5>
+                </div>
+                <div class="col">
+                  <p class="card-text">active course</p>
+                  <h5 class="card-title">0</h5>
+                </div>
+            </div>
+        </div>
+    </section>
+	
+	
+	{% if user_has_verified_payment and user.is_authenticated %}
+    <div class="container">
+        <div class="row">
+
+            <div class="w-100"></div>
+            <div class="col">
+                <div class="col-sm-12 col-md-6 col-lg-6 service-col wow zoomIn">
+                    <div class="card cardss" style=" border: none !important; text-align: center !important;">
+                  <a href="/advanceclass" > <img src="{% static './img/advanced.png' %}" class="card-img-top" alt="..."></a>
+                    <div class="card-body">
+                      <a href="/advanceclass" >  <h5 class="card-title">Advance Class </h5> </a>
+                      <p class="card-text">
+					  Step up your skills in the forex market with our premuim advanced course</p>
+                    </div>
+                    <ul class="list-group list-group-flush">
+                    
+                       <li class="list-group-item"><img src="{% static './img/Group 1000000931.png' %}" > <span class="cour-paras" >{{ items_count }} videos</span></li>
+                      <li class="list-group-item">Advanced Class – PREMUIM!</li>
+                    </ul>
+                  </div>
+                  </div>
+            </div>
+        </div>
+    </div>
+	{% endif %}
+{% endblock %}

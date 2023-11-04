@@ -1,0 +1,80 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+
+{% block content %}
+<body>
+
+    <div class="section header-bg">
+        <div class="container">
+            <div class="row">
+                <div class="col ">
+                      
+                      <nav aria-label="breadcrumb " >
+                        <ol class="breadcrumb" >
+                          <li class="breadcrumb-item "><a href="/">
+                            <img src="{% static './img/Group 1000000930.png' %}">
+                            Back</a></li>
+                          <!-- <li class="breadcrumb-item active" aria-current="page">Library</li> -->
+                        </ol>
+                      </nav>
+                      
+                </div>
+                <div class="w-100"></div>
+                <div class="col">
+                    <h3 class="service-head">Courses</h3>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="section service-section service-section-mobile">
+      <div class="container">
+          <div class="row">
+             
+              <div class="w-100"></div>
+              <div class="col-sm-12 col-md-6 col-lg-6 service-col wow zoomIn">
+                  <div class="card cardss" style=" border: none !important; text-align: center !important;">
+                    <a href="/freeclass" > <img src="{% static './img/begineers.png' %}" class="card-img-top" alt="..."></a>
+                      <div class="card-body">
+                        <a href="/freeclass" >  <h5 class="card-title">Beginner's Class</h5> </a>
+                        <p class="card-text">
+						Everything you need to know about forex, this class with …</p>
+                      </div>
+                      <ul class="list-group list-group-flush">
+                      
+                        <li class="list-group-item"><img src="{% static './img/Group 1000000931.png' %}" > <span class="cour-paras" >{{ item_count }} videos</span></li>
+                        <li class="list-group-item">Beginner Class – FREE!</li>
+                      </ul>
+                    </div>
+              </div>
+              <div class="col-sm-12 col-md-6 col-lg-6 service-col wow zoomIn">
+                <div class="card cardss" style=" border: none !important; text-align: center !important;">
+                  <a href="/advanceclass" > <img src="{% static './img/advanced.png' %}" class="card-img-top" alt="..."></a>
+                    <div class="card-body">
+                      <a href="/advanceclass" >  <h5 class="card-title">Advance Class </h5> </a>
+                      <p class="card-text">
+					  Step up your skills in the forex market with our premuim advanced course</p>
+                    </div>
+                    <ul class="list-group list-group-flush">
+                    
+                       <li class="list-group-item"><img src="{% static './img/Group 1000000931.png' %}" > <span class="cour-paras" >{{ items_count }} videos</span></li>
+                      <li class="list-group-item">Advanced Class – PREMUIM!</li>
+                    </ul>
+                  </div>
+              </div>
+              <div class="w-100"></div>
+              <div class="col" style="text-align: center !important; margin-top: 40px; margin-bottom: 40px;">
+              </div>
+          </div>
+      </div>
+  </div>
+
+    
+</body>
+</html>
+
+{% endblock %}

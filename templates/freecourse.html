@@ -1,0 +1,94 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+
+{% block content %}
+<body>
+
+    
+    <div class="section header-bg">
+        <div class="container">
+            <div class="row">
+                <div class="col ">
+                      
+                      <nav aria-label="breadcrumb " >
+                        <ol class="breadcrumb" >
+                          <li class="breadcrumb-item "><a href="/freeclass">
+                            <img src="{% static './img/Group 1000000930.png' %}">
+                            Back</a></li>
+                          <!-- <li class="breadcrumb-item active" aria-current="page">Library</li> -->
+                        </ol>
+                      </nav>
+                      
+                </div>
+                <div class="w-100"></div>
+                <div class="col">
+                   <h3 class="service-head">{{ details.title }}</h3>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="section service-section">
+      <div class="container">
+          <div class="row">
+            <div class="col-sm-12 col-md-8 col-lg-8">
+              <div class="card" style=" border: none !important; text-align: center !important;">
+              
+				<video controls>
+				 <source src="{{ details.videofile.url }}" type="video/mp4">
+				</video>
+                  <div class="card-body">
+                   <h5 class="card-title">{{ details.title }}</h5> 
+                    <p class="card-text">{{ details.description }}</p>
+                  </div>
+                  <ul class="list-group list-group-flush">
+                    <li class="list-group-item">{{ details.tutor }}</li>
+                    <li class="list-group-item">{{ details.minutes }}</li>
+                  </ul>
+                </div>
+            </div>
+              <div class="col-sm-12 col-md-4 col-lg-4">
+             
+                  <br>
+                  <table class="table">
+                      <caption >This is the basic lesson on forex trading !</caption>
+                      <thead>
+                        <tr>
+                          <th scope="col">Topic</th>
+                          <th scope="col">Duration</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+					  {% for x in beginners %}
+                        <tr>
+                         <th scope="row"><a href="freecourse{{ x.id }}"> <img src="{% static './img/Group 1000000931.png' %}" >
+                          <span class="cur-text"> {{ x.title }}</span></a></th>
+      
+                          <td class="cur-para">{{ x.minutes }}</td>
+                        </tr>
+						{% endfor %}
+                      </tbody>
+                    </table>
+              </div>
+              
+              
+          </div>
+      </div>
+  </div>
+
+
+
+    
+
+
+
+   
+    
+</body>
+</html>
+
+{% endblock %}

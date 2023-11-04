@@ -1,0 +1,57 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+
+<div class="container mt-4">
+    <div class="row">
+      
+        <div class="col">
+           <form method="POST">
+					{% csrf_token %}
+					
+						<div class="row">
+						
+						
+						<div class="col-md-12">
+						<h5 class="service-dashboard" style="font-family: 'Bahnschrift','sans-serif' !important; font-style: normal !important; font-weight: 500 !important; font-size: 30px !important; margin-bottom: 2%;  margin-top: 3%;">
+						Login
+						</h5>
+						</div>
+						
+									
+							<div class="col-md-12">
+								    <div class="form-group">
+                
+										{{ form.username }}
+										{% comment %} Display username field errors {% endcomment %}
+										{{ form.username.errors }}
+									</div>
+									<br>
+									 <div class="form-group">
+        
+										{{ form.password }}
+										{% comment %} Display password1 field errors {% endcomment %}
+										{{ form.password.errors }}
+									</div>
+									<br>
+								<br>
+								<a href="/password_reset">Forgot password?</a><br><br>
+								<p>Don't have an account? <a href="/signup">Sign up</a></p><br>
+								
+								
+								<button class="btnss" value="Login" type="submit">Login</button>
+							</div>
+							
+							
+						</div> 
+
+						
+					</form>
+        </div>
+    </div>
+</div>
+
+
+{% endblock content%}

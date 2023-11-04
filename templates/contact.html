@@ -1,0 +1,96 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+
+{% block content %}
+
+    <div class="section header-bg">
+        <div class="container">
+            <div class="row">
+                <div class="col ">
+                      
+                      <nav aria-label="breadcrumb " >
+                        <ol class="breadcrumb" >
+                          <li class="breadcrumb-item "><a href="/">
+                            <img src="{% static './img/Group 1000000930.png' %}">
+                            Back</a></li>
+                          <!-- <li class="breadcrumb-item active" aria-current="page">Library</li> -->
+                        </ol>
+                      </nav>
+                      
+                </div>
+                <div class="w-100"></div>
+                <div class="col">
+                    <h3 class="service-head">Contact</h3>
+                </div>
+            </div>
+        </div>
+    </div>
+	
+	
+		<!-- Start Contact -->
+	<div class="map-full"></div>
+	<div class="contact-box">
+		<div class="container">
+
+			<div class="row">
+				<div class="col-lg-12">
+					<form method="POST">
+					{% csrf_token %}
+					
+						<div class="row">
+						
+									<div class="col-md-12">
+									<div class="form-group">
+									<label for="{{ forms.name.id_for_label }}">Name:</label><br>
+										{{ forms.name }}
+										{{ forms.name.errors }}
+									</div>
+									</div>
+									<div class="col-md-12">
+									<div class="form-group">
+										<label for="{{ forms.email.id_for_label }}">Email:</label><br>
+										{{ forms.email }}
+										{{ forms.email.errors }}
+									</div>
+									</div>
+									<div class="col-md-12">
+									<div class="form-group">
+										<label for="{{ forms.phone_number.id_for_label }}">Phone Number:</label><br>
+										{{ forms.phone_number }}
+										{{ forms.phone_number.errors }}
+									</div>
+									</div>
+									
+										<div class="col-md-12">
+								<div class="form-group">
+										<label for="{{ forms.message.id_for_label }}">Message:</label><br>
+										{{ forms.message }}
+										{{ forms.message.errors }}
+									</div>
+							
+								<div class="submit-button ">
+									<button class="btn btn-common btnss" id="submit" type="submit">Send Message</button>
+								
+									<div id="msgSubmit" class="h3 text-center hidden"></div> 
+									<div class="clearfix"></div> 
+								</div>
+							</div>
+							
+							
+						</div> 
+
+						
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- End Contact -->
+	
+    
+</body>
+</html>
+
+{% endblock %}

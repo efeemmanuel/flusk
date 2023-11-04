@@ -1,0 +1,202 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+
+{% block content %}
+<body class="">
+
+    <div class="section header-bg ">
+        <div class="container">
+            <div class="row">
+                <div class="col  header-col">
+                    <h1 class="header-text animate__animated animate__backInLeft"><span style="color: #3E36B0; border-bottom: 2px solid #3E36B0;">Flusk Forex</span>
+                        Trading Academy</h1>
+                    <br>
+                    <p class="header-para animate__animated animate__backInLeft">Learn how to trade forex with Flusk Training Institute. 
+                        It is the complete beginner's guide to forex trading.</p>
+						<a href="/course">
+                         <button class="btnss animate__animated animate__backInLeft" >Explore courses</button>
+						</a>
+                </div>
+                <div class="col head-img">
+                  <img src="{% static './img/headerr.png' %}" class="img-fluid animate__animated animate__backInDown" alt="Responsive image">
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- <div class="section">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <h3>About us</h3>
+                    <p>Far far away, behind the word mountains, far 
+                        from the countries Vokalia and Consonantia, 
+                        there live the blind texts. Separated they live.</p>
+                        <button>Join Mentorship</button>  
+                </div>
+            </div>
+        </div>
+    </div> -->
+
+    <div class="section service-section service-section-mobile ">
+        <div class="container">
+            <div class="row">
+                <div class="col animate__animated animate__fadeInUp  animate__delay-2s">
+                    <h3 class="service-head">Everything you Need in <span style="color: #3E36B0; border-bottom: 2px solid #3E36B0;">One Place</span></h3>
+                </div>
+                <div class="w-100"></div>
+                    <div class="col-sm-12 col-md-4 col-lg-4 service-col animate__animated animate__fadeInUp  animate__delay-2s" >
+                        <div class="card cards" style=" border: none !important; text-align: center !important;">
+                            <img src="{% static './img/service1.png' %}" class="card-img-top ser1" alt="...">
+                            <div class="card-body">
+                              <h5 class="card-title">Pratical Class</h5>
+                              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                           
+                            </div>
+                          </div>
+                    </div>
+                    <div class="col-sm-12 col-md-4 col-lg-4 service-col animate__animated animate__fadeInUp  animate__delay-2s" >
+                        <div class="card" style=" border: none !important; text-align: center !important;">
+                            <img src="{% static './img/service2.png' %}" class="card-img-top" alt="...">
+                            <div class="card-body">
+                              <h5 class="card-title">Card title</h5>
+                              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                              
+                            </div>
+                          </div>
+                    </div>
+                    <div class="col-sm-12 col-md-4 col-lg-4 service-col animate__animated animate__fadeInUp  animate__delay-2s" >
+                        <div class="card" style=" border: none !important; text-align: center !important;">
+                            <img src="{% static './img/service3.png' %}" class="card-img-top" alt="...">
+                            <div class="card-body">
+                              <h5 class="card-title">Card title</h5>
+                              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                             
+                            </div>
+                          </div>
+                    </div>
+            </div>
+        </div>
+    </div>
+    
+
+    <div class="section service-section service-section-mobile">
+        <div class="container">
+            <div class="row">
+                <div class="col animate__animated animate__fadeInUp  animate__delay-2s">
+                    <h3 class="service-head">Courses Designed For You!</h3>
+                  
+                </div>
+                <div class="w-100"></div>
+                <div class="col-sm-12 col-md-6 col-lg-6 service-col wow zoomIn">
+                  <div class="card cardss" style=" border: none !important; text-align: center !important;">
+                    <a href="/freeclass" > <img src="{% static './img/begineers.png' %}" class="card-img-top" alt="..."></a>
+                      <div class="card-body">
+                        <a href="/freeclass" >  <h5 class="card-title">Beginner's Class</h5> </a>
+                        <p class="card-text">
+						Everything you need to know about forex, this class with …</p>
+                      </div>
+                      <ul class="list-group list-group-flush">
+                      
+                        <li class="list-group-item"><img src="{% static './img/Group 1000000931.png' %}" > <span class="cour-paras" >{{ item_count }} videos</span></li>
+                        <li class="list-group-item">Beginner Class – FREE!</li>
+                      </ul>
+                    </div>
+              </div>
+                <div class="col-sm-12 col-md-6 col-lg-6 service-col wow zoomIn">
+                <div class="card cardss" style=" border: none !important; text-align: center !important;">
+                  <a href="/advanceclass" > <img src="{% static './img/advanced.png' %}" class="card-img-top" alt="..."></a>
+                    <div class="card-body">
+                      <a href="/advanceclass" >  <h5 class="card-title">Advance Class </h5> </a>
+                      <p class="card-text">
+					  Step up your skills in the forex market with our premuim advanced course</p>
+                    </div>
+                    <ul class="list-group list-group-flush">
+                    
+                       <li class="list-group-item"><img src="{% static './img/Group 1000000931.png' %}" > <span class="cour-paras" >{{ items_count }} videos</span></li>
+                      <li class="list-group-item">Advanced Class – PREMUIM!</li>
+                    </ul>
+                  </div>
+              </div>
+                <div class="w-100"></div>
+                <div class="col" style="text-align: center !important; margin-top: 40px; margin-bottom: 40px;">
+                 
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="section service-section service-section-mobile">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <h3 class="service-head">Expert Instructors</h3>
+                </div>
+                <div class="w-100"></div>
+                <div class=" col-sm-12 col-md-4 col-lg-4 service-col">
+                    <div class="card" style="  border: none !important; text-align: center !important;">
+                        <img src="{% static './img/team-1.jpg' %}" class="card-img-top" alt="...">
+                        <div class="card-body">
+                          <h5 class="card-title">John Doe</h5>
+                          <p class="card-text">Swing Trader</p>
+                        </div>
+                      </div>
+                </div>
+                <div class=" col-sm-12 col-md-4 col-lg-4 service-col">
+                    <div class="card" style="  border: none !important; text-align: center !important;">
+                        <img src="{% static './img/team-2.jpg' %}" class="card-img-top" alt="...">
+                        <div class="card-body">
+                          <h5 class="card-title">Jane Doe</h5>
+                          <p class="card-text">Day Trader</p>
+                        </div>
+                      </div>
+                </div>
+                <div class=" col-sm-12 col-md-4 col-lg-4 service-col">
+                    <div class="card" style="  border: none !important; text-align: center !important;">
+                        <img src="{% static './img/team-3.jpg' %}" class="card-img-top" alt="...">
+                        <div class="card-body">
+                          <h5 class="card-title">John Doe</h5>
+                          <p class="card-text">Scalper</p>
+                        </div>
+                      </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="section service-section last-sec service-section-mobile">
+        <div class="container">
+            <div class="row">
+                <div class="col service-col">
+                    <h3 class="service-head" >Our Students Say!</h3>
+                </div>
+                <div class="w-100"></div>
+                <div class="col service-col">
+                  <div class="media">
+                    <img src="{% static './img/Mask group.png' %}" class="mr-3" alt="...">
+                    <div class="media-body">
+                      <h5 class="mt-0 test-text">John Doe</h5>
+                     <p class="test-para"> Flusk trading academy is the best....</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col service-col">
+                  <div class="media">
+                    <img src="{% static './img/Mask group.png' %}" class="mr-3" alt="...">
+                    <div class="media-body">
+                      <h5 class="mt-0 test-text">Cyntia James</h5>
+                     <p class="test-para"> The best thing that has ever happened to me...
+					 joining the flusk academy</p>
+                    </div>
+                  </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+   {% endblock %}
