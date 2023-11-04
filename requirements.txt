@@ -7,7 +7,6 @@ future==0.18.3
 idna==3.4
 Paperboy==1.0.1
 Pillow==9.5.0
-pypaystack==1.0.7
 python-dateutil==2.8.2
 requests==2.31.0
 six==1.16.0
