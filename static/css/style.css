@@ -1,5 +1,97 @@
+.navvv {
+    border-radius: 10%;
+}
+.nav_color {
+    background-color: #ffffff;
+    padding: 0 30px;
+}
+.nav_items {
+    margin-left: auto; /* Pushes the nav items to the right */
+}
+.navbar-nav a.active {
+    border-bottom: 3px solid #E1A322;
+}
+.nav-item {
+    font-family: 'Bahnschrift','sans-serif' !important;
+    margin-top: 15px;
+    font-weight: 400 !important;
+    font-size: 18px !important;
+    line-height: 19px !important;
+    border-bottom: 2px solid transparent;
+    color: rgb(54, 54, 54) !important;
+}
+.nav-item:hover {
+    border-bottom: 2px solid #3E36B0;
+    color: #3E36B0 !important;
+}
+
+.btnss {
+    background-color: #3E36B0;
+    color: white;
+    border-radius: 30px;
+    padding: 5px 15px;
+    font-size: 16px;
+}
+
+.navbar-toggler {
+    border: none;
+}
 
 
+
+
+@media (max-width: 768px) {
+    .navbar-collapse {
+        justify-content: flex-start !important; /* Align the navbar collapse content to the left */
+        text-align: left; /* Align the text content to the left */
+    }
+
+    .navbar-brand {
+        margin-left: auto;
+        margin-right: auto; /* Keep the logo centered if needed */
+    }
+
+    .navbar-brand img {
+        width: 90px; /* Adjust the logo size for mobile view */
+        height: auto; /* Maintain the aspect ratio */
+    }
+
+    .navbar-nav {
+        width: 100%; /* Ensure the nav bar takes full width */
+        justify-content: flex-start; /* Align nav items to the left */
+    }
+
+    .nav-item {
+        margin-top: 10px;
+        font-size: 16px !important;
+        display: block; /* Ensure nav items stack vertically */
+        text-align: left; /* Align nav items to the left */
+    }
+
+    .btnss {
+        margin: 10px 0; /* Remove auto margin to align with nav items */
+        display: block; /* Block-level to ensure it's centered */
+        width: fit-content; /* Adjust the width of the button */
+        text-align: left; /* Align the button text to the left */
+    }
+
+    .navbar-toggler {
+        margin-left: auto;
+        margin-right: auto; /* Keep the hamburger menu centered */
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+/* 
 .navvv {
     border-radius: 10%;
 }
@@ -14,22 +106,53 @@
   }
 .nav-item  {
     font-family: 'Bahnschrift','sans-serif' !important;
-    /* font-family: 'sans-serif'; */
     margin-top: 15px;
     font-style: normal !important;
     font-weight: 400 !important;
     font-size: 18px !important;
     line-height: 19px !important;
     border-bottom: 2px solid  #3e36b000;
-    /* letter-spacing: 0.09em !important; */
    
     color: rgb(54, 54, 54) !important;
 }
 .nav-item:hover {
     border-bottom: 2px solid  #3E36B0;
     color: #3E36B0 !important;
-    /* border-bottom: 3px solid #E1A322;; */
-}
+} */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 .btnss {
     margin-top: 10px;
     padding: 13px 18px;
@@ -126,6 +249,7 @@
     font-weight: 200 !important;
     font-size: 18px !important;
 }
+
 .test-text {
     font-family: 'Bahnschrift','sans-serif' !important;
     font-style: normal !important;
@@ -318,3 +442,12 @@ th a {
         width: 100% !important;
     }
 }
+
+
+
+
+
+
+
+/* sign up page */
+
