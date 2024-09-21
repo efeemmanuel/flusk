@@ -4,7 +4,10 @@
 
 
 {% block content %}
+
 <body class="">
+
+
 
     <div class="section header-bg ">
         <div class="container">
@@ -27,19 +30,7 @@
         </div>
     </div>
 
-    <!-- <div class="section">
-        <div class="container">
-            <div class="row">
-                <div class="col">
-                    <h3>About us</h3>
-                    <p>Far far away, behind the word mountains, far 
-                        from the countries Vokalia and Consonantia, 
-                        there live the blind texts. Separated they live.</p>
-                        <button>Join Mentorship</button>  
-                </div>
-            </div>
-        </div>
-    </div> -->
+ 
 
     <div class="section service-section service-section-mobile ">
         <div class="container">
@@ -50,7 +41,11 @@
                 <div class="w-100"></div>
                     <div class="col-sm-12 col-md-4 col-lg-4 service-col animate__animated animate__fadeInUp  animate__delay-2s" >
                         <div class="card cards" style=" border: none !important; text-align: center !important;">
-                            <img src="{% static './img/service1.png' %}" class="card-img-top ser1" alt="...">
+                            
+                            <div class="d-flex justify-content-center">
+                              <img src="{% static './img/service1.png' %}" class="card-img-top" alt="..." style="width: 220px; height: auto;">
+                          </div>
+
                             <div class="card-body">
                               <h5 class="card-title">Pratical Class</h5>
                               <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
@@ -60,7 +55,10 @@
                     </div>
                     <div class="col-sm-12 col-md-4 col-lg-4 service-col animate__animated animate__fadeInUp  animate__delay-2s" >
                         <div class="card" style=" border: none !important; text-align: center !important;">
-                            <img src="{% static './img/service2.png' %}" class="card-img-top" alt="...">
+                          <div class="d-flex justify-content-center">
+                            <img src="{% static './img/service2.png' %}" class="card-img-top" alt="..." style="width: 220px; height: auto;">
+                        </div>
+                        
                             <div class="card-body">
                               <h5 class="card-title">Card title</h5>
                               <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
@@ -70,7 +68,11 @@
                     </div>
                     <div class="col-sm-12 col-md-4 col-lg-4 service-col animate__animated animate__fadeInUp  animate__delay-2s" >
                         <div class="card" style=" border: none !important; text-align: center !important;">
-                            <img src="{% static './img/service3.png' %}" class="card-img-top" alt="...">
+                            <div class="d-flex justify-content-center">
+                              <img src="{% static './img/service3.png' %}" class="card-img-top" alt="..." style="width: 220px; height: auto;">
+                          </div>
+
+
                             <div class="card-body">
                               <h5 class="card-title">Card title</h5>
                               <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
@@ -101,7 +103,7 @@
                       </div>
                       <ul class="list-group list-group-flush">
                       
-                        <li class="list-group-item"><img src="{% static './img/Group 1000000931.png' %}" > <span class="cour-paras" >{{ item_count }} videos</span></li>
+                        <a href="/freeclass" >     <li class="list-group-item"><img src="{% static './img/Group 1000000931.png' %}" > <span class="cour-paras" >{{ item_count }} videos</span></li>  </a>
                         <li class="list-group-item">Beginner Class – FREE!</li>
                       </ul>
                     </div>
@@ -112,11 +114,11 @@
                     <div class="card-body">
                       <a href="/advanceclass" >  <h5 class="card-title">Advance Class </h5> </a>
                       <p class="card-text">
-					  Step up your skills in the forex market with our premuim advanced course</p>
+					  Step up your skills in the forex market with our advanced course</p>
                     </div>
                     <ul class="list-group list-group-flush">
                     
-                       <li class="list-group-item"><img src="{% static './img/Group 1000000931.png' %}" > <span class="cour-paras" >{{ items_count }} videos</span></li>
+                      <a href="/advanceclass" >   <li class="list-group-item"><img src="{% static './img/Group 1000000931.png' %}" > <span class="cour-paras" >{{ items_count }} videos</span></li>  </a>
                       <li class="list-group-item">Advanced Class – PREMUIM!</li>
                     </ul>
                   </div>
@@ -175,7 +177,7 @@
                     <h3 class="service-head" >Our Students Say!</h3>
                 </div>
                 <div class="w-100"></div>
-                <div class="col service-col">
+                <div class="col-lg-6 col-md-6 col-sm-12 service-col">
                   <div class="media">
                     <img src="{% static './img/Mask group.png' %}" class="mr-3" alt="...">
                     <div class="media-body">
@@ -184,7 +186,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="col service-col">
+                <div class="col-lg-6 col-md-6 col-sm-12 service-col">
                   <div class="media">
                     <img src="{% static './img/Mask group.png' %}" class="mr-3" alt="...">
                     <div class="media-body">
