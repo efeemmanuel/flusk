@@ -16,8 +16,63 @@
   />
 </head>
 <header>
+
+    <!-- Navbar Start -->
+<div class="container-fluid">
+    <div class="row">
+      <div class="col-12 navvv">
+        <nav class="navbar navbar-expand-lg nav_color">
+          <a class="navbar-brand" href="/">
+            <img src="{% static './img/logo.png' %}" class="mt-2 brand-img" style="width: 90px !important;">
+          </a>
+  
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <img src="{% static './img/ham.png' %}" style="width: 35px; height: 35px;">
+          </button>
+  
+          <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup"> 
+            <div class="navbar-nav nav_items">
+              <a class="nav-item nav-link mr-4" href="/">Home</a>
+              <a class="nav-item nav-link mr-4" href="/course">Courses</a>
+              <a class="nav-item nav-link mr-4" href="/contact">Contact</a>
+              {% if request.user.is_authenticated %}
+                <a class="nav-item nav-link mr-4" href="/dashboard">Dashboard</a>
+                <a class="nav-item nav-link mr-4" href="/logout">Logout</a>
+              {% else %}
+                <a class="nav-item nav-link mr-4" href="login">Login</a>
+                <a href="/signup">
+                  <button class="mr-4 btnss">Sign up</button> 
+                </a>
+              {% endif %}
+            </div>
+          </div>
+        </nav>
+      </div>
+    </div>
+  </div>
+  <!-- Navbar ends -->
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
          <!-- Navbar Start -->
-         <div class="container  ">
+         <!-- <div class="container  ">
           <div class="row">
               <div class="col navvv">
                   <nav class="navbar navbar-expand-lg  nav_color">
@@ -31,8 +86,6 @@
 
                       <div class="collapse navbar-collapse" id="navbarNavAltMarkup"> 
                         <div class="navbar-nav nav_items" style="margin-left: 75px;">
-                          <!-- <a class="nav-item nav-link active mr-4" href="./index.html">HOME <span class="sr-only">(current)</span></a> -->
-                          <!-- <a class="nav-item nav-link mr-4" href="#aboutus">About Us</a> -->
                           <a class="nav-item nav-link mr-4" href="/">Home</a>
                           <a class="nav-item nav-link mr-4" href="/course">Courses</a>
                           <a class="nav-item nav-link mr-4" href="/contact">Contact</a>
@@ -52,18 +105,18 @@
                           <button class=" mr-4 btnss">Sign up</button> 
                           </a>
 						{%endif%}
-						  
-						  
-						  
-						  
+
                         </div>
                       </div>
                     </nav>
               </div>
           </div>
-       </div>
+       </div> -->
         <!-- Navbar ends -->
 </header>
+
+
+
 
          {% if messages %}
 			<div class="messages">
@@ -95,6 +148,9 @@
              
                 </div>
                 <div class="col-lg-3 col-md-6">
+                   
+                </div>
+                <div class="col-lg-3 col-md-6">
                     <h4 class="text-white mb-3">Contact</h4>
                     <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>123 Street, New York, USA</p>
                     <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>+012 345 67890</p>
@@ -107,14 +163,7 @@
                     </div>
                 </div>
 
-                <div class="col-lg-3 col-md-6">
-                    <h4 class="text-white mb-3">Newsletter</h4>
-                    <p>Dolor amet sit justo amet elitr clita ipsum elitr est.</p>
-                    <div class="position-relative mx-auto" style="max-width: 400px;">
-                        <input class="form-control border-0 w-100 py-3 ps-4 pe-5" type="text" placeholder="Your email">
-                        <button type="button" class="btn btn-primary py-2 position-absolute top-0 end-0 mt-2 me-2">SignUp</button>
-                    </div>
-                </div>
+        
             </div>
         </div>
 
