@@ -1,57 +1,233 @@
-{% extends 'base.html' %}
 {% load static %}
 
-{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    
+</head>
+<style>
+    * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
 
-<div class="container mt-4">
-    <div class="row">
-      
-        <div class="col">
-           <form method="POST">
-					{% csrf_token %}
-					
-						<div class="row">
-						
-						
-						<div class="col-md-12">
-						<h5 class="service-dashboard" style="font-family: 'Bahnschrift','sans-serif' !important; font-style: normal !important; font-weight: 500 !important; font-size: 30px !important; margin-bottom: 2%;  margin-top: 3%;">
-						Login
-						</h5>
-						</div>
-						
-									
-							<div class="col-md-12">
-								    <div class="form-group">
-                
-										{{ form.username }}
-										{% comment %} Display username field errors {% endcomment %}
-										{{ form.username.errors }}
-									</div>
-									<br>
-									 <div class="form-group">
+.container {
+    display: flex;
+    max-width: 900px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    width: 100%;
+}
+
+.form-section {
+    flex: 1;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+}
+
+.back-link {
+    text-decoration: none;
+    color: #333;
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="checkbox"] {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+    width: 100%;
+}
+
+.checkbox-group {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.checkbox-group input {
+    margin-right: 10px;
+}
+
+.checkbox-group label a {
+    color: #3E36B0;
+    text-decoration: none;
+}
+
+button,
+input[type="submit"] {
+    background-color: #e0e0e0;
+    color: #ccc;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    width: 100%;
+}
+
+button:hover,
+input[type="submit"]:hover {
+    background-color: #3E36B0;
+    color: #ffffff;
+}
+
+.info-section {
+    flex: 1;
+    background-color: #FFE9D6;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 30px;
+    position: relative;
+}
+
+.info-content {
+    text-align: center;
+}
+
+.info-content img {
+    width: 300px;
+   height: 300px;
+    border-radius: 5%;
+    margin-bottom: 20px;
+}
+
+.invoice-created {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #FFE9D6;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    font-size: 14px;
+}
+
+.invoice-created .icon {
+    color: #3E36B0;
+    font-size: 18px;
+    margin-right: 10px;
+}
+
+h2 {
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+p {
+    font-size: 14px;
+    color: #555;
+}
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        box-shadow: none;
+    }
+
+    .form-section {
+        margin-top: 60%;
+    }
+
+    .info-section {
+        visibility: hidden;
         
-										{{ form.password }}
-										{% comment %} Display password1 field errors {% endcomment %}
-										{{ form.password.errors }}
-									</div>
-									<br>
-								<br>
-								<a href="/password_reset">Forgot password?</a><br><br>
-								<p>Don't have an account? <a href="/signup">Sign up</a></p><br>
-								
-								
-								<button class="btnss" value="Login" type="submit">Login</button>
-							</div>
-							
-							
-						</div> 
+    }
+    
+}
 
-						
-					</form>
+
+
+</style>
+<body>
+    <div class="container">
+
+
+    
+        <div class="form-section">
+            <a href="/" class="back-link">← Go back</a>
+            <h1>Welcome back!</h1>
+            <br>
+            <form method="POST">
+                {% csrf_token %}
+                
+                <!-- Username Field -->
+                <div class="form-group">
+                    {{ form.username }}
+					{% comment %} Display username field errors {% endcomment %}
+					{{ form.username.errors }}
+                </div>
+                
+                <!-- Email Field -->
+                <div class="form-group">
+                    {{ form.password }}
+					{% comment %} Display password1 field errors {% endcomment %}
+					{{ form.password.errors }}
+                </div>
+
+
+
+                <div style="padding: 20px;">
+                    <span>Don't have an account? <a href="/signup">Sign up</a></span>
+                </div>
+
+                <input type="submit" class="but btnss" value="Sign in">
+            </form>
         </div>
+
+
+        
+        <div class="info-section">
+            <div class="info-content">
+                <img src="https://img.freepik.com/free-psd/portrait-young-teenage-girl_23-2150163961.jpg?t=st=1726872007~exp=1726875607~hmac=b0787c1792e8c828501cb225ff66a24c4f862e4a23b0261f1ee7726a45fb5e9d&w=740">
+               
+                <h2>Seamless Learning!</h2>
+                <p>Dive into a world of knowledge where every course is at your fingertips. Whether you're a beginner or advancing your skills, our platform ensures a smooth, intuitive learning experience.</p>
+            </div>
+        </div>
+
+
+
+       
     </div>
-</div>
+</body>
+</html>
 
 
-{% endblock content%}
